@@ -49,7 +49,7 @@ const config = {
                     },
                     {
                         module: 'good-file',
-                        args: [process.cwd() + '/logs/log.json']
+                        args: [`${process.cwd()}/logs/log.json`]
                     }
                 ]
             }

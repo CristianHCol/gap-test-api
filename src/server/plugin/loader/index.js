@@ -30,14 +30,7 @@ internals.register = module.exports = (server, options, next) => {
             }
 
             return internals.registerHandlers(server, options.handlers, callback);
-        },
-        routes: ['preHandlers', 'handlers', (data, callback) => {
-            if (!options.routes) {
-                return callback(null, false);
-            }
-
-            return internals.registerRoutes(server, options.routes, callback);
-        }]
+        }
     }, (err, res) => {
         if (err) {
             return next(err);
@@ -118,16 +111,3 @@ internals.registerHandlers = (server, options, callback) => {
     return callback(null, true);
 };
 
-internals.registerRoutes = (server, options, callback) => {
-
-    _.map(loadFiles(options.pattern, options.glob), (file) => {
-
-        const routeFileName = camelCase(path.basename(file).replace(/.js/, ''));
-        const router = require(file);
-        router(server);
-
-        server.log(['info', 'registerRoutes'], `registered routes in file ${routeFileName}`);
-    });
-
-    return callback(null, true);
-};

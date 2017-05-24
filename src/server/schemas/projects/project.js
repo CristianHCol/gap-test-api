@@ -8,7 +8,7 @@ const projects = module.exports = {};
 projects.schema = joi.object().keys({
 
     id: joi.string().required()
-        .description('').label('email'),
+        .description('project id').label('id'),
 
     name: joi.string().min(5).max(30) 
         .required().description('project name').label('name'),
