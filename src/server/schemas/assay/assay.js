@@ -2,7 +2,7 @@
 
 const joi = require('joi');
 const type = require('../test_type/types');
-const norm = require('../norms/norms');
+const norm = require('../norms/norm');
 
 const assay = module.exports = {};
 

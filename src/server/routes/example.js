@@ -1,6 +1,8 @@
 'use strict';
 
-module.exports = (server) => {
+const exampleRoutes = {};
+
+exampleRoutes.register = module.exports = (server, options, next) => {
     server.route([
         {
             method: 'GET',
@@ -63,4 +65,11 @@ module.exports = (server) => {
             }
         }
     ]);
+
+    return next();
+};
+
+exampleRoutes.register.attributes = {
+    name: 'exampleRoutes',
+    version: '1.0.0'
 };

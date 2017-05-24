@@ -1,5 +1,6 @@
 const Confidence = require('confidence');
 const config = require('./config');
+const ssl = require('./ssl');
 
 const manifest = {
     $meta: 'services for event management.',
@@ -11,12 +12,19 @@ const manifest = {
             routes: {
                 security: true
             }
-        }
+        },
+        
     },
     connections: [{
         host: config.get('/host/api'),
         port: config.get('/port/api'),
-        labels: ['api']
+        labels: ['api'],
+         routes: {
+            cors: {
+                origin: ['*']
+            }
+        },
+        tls: ssl.tls
     }],
     registrations: [
         {
@@ -60,8 +68,20 @@ const manifest = {
                 register: './mongo-connection',
                 options: config.get('/mongo')
             }
+    },
+    {
+            plugin: {
+                register: `${process.cwd()}/src/server/routes/example`
+            }, 
+            options: {
+            routes: {
+                prefix: `/api/${process.env.VERSIONAPI}`
+            }
         }
-    ]
+
+        }],
+
+
 };
 
 module.exports = new Confidence.Store(manifest);
