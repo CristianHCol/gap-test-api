@@ -1,17 +1,16 @@
-# LAB APP MICROSERVICES EVENT MANAGER
+# LAB APP MICROSERVICE EVENT MANAGER
 
 ## Getting Started
 
 # Configure  enviroment variables
-- Create .envrc file in your root directory
+- Create .envrc file in your root directory project
 ```
-add 
 export DB='dbname'
 export HOST='ip'
 export VERSIONAPI='versionapi'
 ```
 
-then run the command `direnv allow {path to allow}`
+then run the command `direnv allow {. or project path}`
 
 
 ## UP THE DATABASE
@@ -22,9 +21,9 @@ Up your databae because a plugin will test the conection
 
 $ npm i
 
-## quality project
+## Quality project
 
-insdie there's the eslint dependecy so you could enable a plugin for scan your quality code or run 
+insdie there's the eslint dependecy so you could enable a plugin in your editor for scan your quality code or run 
 
 $ npm run linter
 
