@@ -1,7 +1,7 @@
 {
-  "name": "management-assays",
+  "name": "gap-test-api",
   "version": "1.0.0",
-  "description": "Microservices that will be manage all events crud in the system",
+  "description": "Microservices test GAP",
   "main": "dist/src/server/index.js",
   "scripts": {
     "build": "babel --copy-files --out-dir dist/src src",
@@ -14,12 +14,8 @@
     "event",
     "management"
   ],
-  "author": "andres perez - cristian hernandez",
+  "author": "cristian hernandez",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git@bitbucket.org:linmed/assays-service.git"
-  },
   "dependencies": {
     "async": "^2.0.1",
     "blipp": "^2.3.0",
@@ -34,8 +30,6 @@
     "inert": "^4.0.2",
     "joi": "^9.1.0",
     "lodash": "^4.16.2",
-    "mongoose": "^4.9.8",
-    "mongoose-paginate": "^5.0.3",
     "scooter": "^4.0.0",
     "vision": "^4.1.0"
   },

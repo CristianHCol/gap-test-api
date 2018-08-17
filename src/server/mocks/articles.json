@@ -1,0 +1,42 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "description": "The best quality of shoes in a green color",
+      "name": "Green shoes",
+      "price": 20.15,
+      "total_in_shell": 25,
+      "tital_in_vault": 40,
+      "store_name": "Super Store"
+    },
+    {
+      "id": 2,
+      "description": "The best quality of shoes in a blue color",
+      "name": "Blue shoes",
+      "price": 10.15,
+      "total_in_shell": 45,
+      "tital_in_vault": 20,
+      "store_name": "Super Store"
+    },
+    {
+      "id": 3,
+      "description": "The best quality of shoes in a white tshirt",
+      "name": "White tshirt",
+      "price": 4.15,
+      "total_in_shell": 125,
+      "tital_in_vault": 220,
+      "store_name": "Super Store"
+    },
+    {
+      "id": 4,
+      "description": "The best quality of shoes in a black tshirt",
+      "name": "Balck tshirt",
+      "price": 5.15,
+      "total_in_shell": 13,
+      "tital_in_vault": 1,
+      "store_name:": "Super Store"
+    }
+  ],
+  "success": true,
+  "total_elements": 4
+}

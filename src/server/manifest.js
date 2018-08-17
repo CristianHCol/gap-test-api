@@ -13,7 +13,7 @@ const manifest = {
                 security: true
             }
         },
-        
+
     },
     connections: [{
         host: config.get('/host/api'),
@@ -63,23 +63,25 @@ const manifest = {
             }
 
         },
-        {
-            plugin: {
-                register: './mongo-connection',
-                options: config.get('/mongo')
-            }
-    },
-    {
-            plugin: {
-                register: `${process.cwd()}/src/server/routes/example`
-            }, 
-            options: {
+         {
+          plugin: {
+              register: `${process.cwd()}/src/server/routes/stores`
+          },
+          options: {
             routes: {
                 prefix: `/api/${process.env.VERSIONAPI}`
             }
         }
-
-        }],
+      }, {
+        plugin: {
+            register: `${process.cwd()}/src/server/routes/articles`
+        },
+        options: {
+          routes: {
+              prefix: `/api/${process.env.VERSIONAPI}`
+          }
+      }
+    }],
 
 
 };

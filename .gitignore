@@ -207,6 +207,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-*.envrc
 test/unit/browser.bundled.js
 dist

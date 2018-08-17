@@ -84,10 +84,6 @@ const config = {
                 cwd: `${process.cwd()}/src/server/pre-handlers`
             }
         }
-    },
-    mongo: {
-        host: process.env.HOST,
-        db: process.env.DB
     }
 };
 
